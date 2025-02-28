@@ -302,7 +302,7 @@ const createLottoItem = (lotto) => {
   const li = document.createElement("li");
   const div = document.createElement("div");
   const img = document.createElement("img");
-  img.src = "../../public/lotto.png";
+  img.src = "/lotto.png";
   img.alt = "lotto";
   div.textContent = lotto.getLottoNumbers().join(", ");
   div.classList.add("lottoNumbers");
