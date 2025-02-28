@@ -1,0 +1,400 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.screen {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 384px;
+  height: 80%;
+
+  gap: 32px;
+  border: #b4b4b4 2px solid;
+  border-radius: 4px;
+  font-size: var(--body-font-size);
+}
+
+.screenHeader {
+  font-weight: var(--title-font-weight);
+  font-size: var(--title-font-size);
+}
+
+.screen h1 {
+  height: 40px;
+  margin-top: 20px;
+  font-weight: var(--title-font-weight);
+  font-size: var(--title-font-size);
+}
+
+.priceInputContainer {
+  width: 100%;
+}
+
+.priceInputContainer .inputAndButton {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 6px;
+  height: 36px;
+}
+
+.priceInputContainer input {
+  width: 100%;
+}
+
+.priceInput {
+  border-radius: 4px;
+  border: 1px solid var(--gray-sclae-3);
+  text-indent: 4px;
+  font-size: var(--body-font-size);
+  padding-top: 6px;
+}
+
+.buyButton {
+  background-color: var(--main-color);
+  color: white;
+  border: 0px;
+  border-radius: 4px;
+  width: 60px;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  cursor: pointer;
+}
+
+.purchaseDetail {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.purchasedLottos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.lottosNumbers ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lottosNumbers li {
+  display: flex;
+  gap: 10px;
+}
+
+.lottosNumbers .lottoNumbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enteredNumberSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.enteredNumbers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.enteredLottoNumbers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.enteredBonusNumber {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.winningNumberInput,
+.bonusNumberInput {
+  border-radius: 4px;
+  border: 1px solid var(--gray-sclae-3);
+  width: 24px;
+  height: 24px;
+}
+
+.winningNumberInputs {
+  display: flex;
+  gap: 8px;
+}
+
+.bonusNumberInputContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkResultButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  height: 36px;
+  color: white;
+  border-radius: 4px;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  cursor: pointer;
+}
+
+dialog {
+  font-size: var(--body-font-size);
+  width: 350px;
+  height: 500px;
+  border: none;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog h3 {
+  margin-top: 20px;
+  font-size: var(--subTitle-font-size);
+  font-weight: var(--subTitle-font-weight);
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  font-size: var(--title-font-size);
+}
+
+.winningHistory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.gridItem {
+  border-bottom: 1px solid var(--gray-sclae-3);
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#rate {
+  font-size: var(--body-font-size);
+  font-weight: var(--subTitle-font-weight);
+}
+
+.tableHeader {
+  font-weight: var(--subTitle-font-weight);
+  border-top: 1px solid var(--gray-sclae-3);
+}
+
+#reset {
+  background-color: var(--main-color);
+  color: white;
+  border: 0px;
+  border-radius: 4px;
+  width: 100%;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  cursor: pointer;
+}
+
+:root {
+  --main-color: #4e5ba6;
+  --gray-sclae-2: #fcfcfd;
+  --gray-sclae-3: #b4b4b4;
+  --title-font-size: 24px;
+  --title-font-weight: 800;
+  --subTitle-font-size: 20px;
+  --subTitle-font-weight: 600;
+  --body-font-size: 15px;
+  --button-font-size: 14px;
+  --button-font-weight: 600;
+}
+
+body {
+  height: 100vh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray-sclae-2);
+  height: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  flex-shrink: 0;
+  background-color: var(--main-color);
+  font-weight: var(--title-font-weight);
+  font-size: var(--title-font-size);
+  color: white;
+}
+
+header h1 {
+  margin-left: 80px;
+}
+
+footer {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  border-top: var(--gray-sclae-3) 1px solid;
+}
